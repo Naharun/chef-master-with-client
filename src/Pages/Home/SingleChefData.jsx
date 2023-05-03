@@ -13,7 +13,7 @@ const SingleChefData = ({ data }) => {
                     <Card.Text>Experience: {YearsOfExperience}</Card.Text>
                     <Card.Text>Recipes: {numberOfRecipes.length}</Card.Text>
                     <Card.Text>Likes: {like}</Card.Text>
-                    <Link to={`/chefData/${id}`}><Button variant="primary">View Recipes</Button></Link>
+                    <Link to={`/recipeData/${id}`}><Button variant="primary">View Recipes</Button></Link>
                 </Card.Body>
             </Card>
         </div>
