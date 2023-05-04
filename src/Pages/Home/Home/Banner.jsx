@@ -4,9 +4,9 @@ import image from '../../../assets/back-back-gastronomy-experts-standing-restaur
 
 const Banner = () => {
     return (
-        <div className='d-flex align-items-center mx-auto container'>
+        <div className='d-lg-flex align-items-center mx-auto container'>
             <div>
-                <img src={image} alt="" />
+                <img className='container' src={image} alt="" />
             </div>
             <div>
                 <h2>Welcome to the website</h2>

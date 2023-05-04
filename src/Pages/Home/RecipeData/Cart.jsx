@@ -4,26 +4,24 @@ import Rating from 'react-rating';
 import { FaRegStar, FaStar } from 'react-icons/fa';
 
 const Cart = ({ data }) => {
-    const { recipe, recipeImage, ingredients, rating, cooking_method } = data;
+    const { RecipeName,RecipesImg, rating, Cuisines } = data;
 
     return (
         <div>
             <Card style={{ width: '18rem' }, { height: '780px' }} >
-                <Card.Img style={{ height: '256px' }} className='p-2 rounded rounded-4' variant="top" src={recipeImage} />
+                <Card.Img style={{ height: '256px' }} className='p-2 rounded rounded-4' variant="top" src={RecipesImg} />
                 <Card.Body className=' position-relative fit-content'>
-                    <Card.Title>{recipe}</Card.Title>
+                    <Card.Title>{RecipeName}</Card.Title>
                     <hr />
                     <span>Cooking Method:</span>
                     <br></br>
                     <div>
-                        <li className='text-black fw-semibold'>{cooking_method.Boiling}</li>
-                        <li className='text-black fw-semibold'>{cooking_method.Smoking}</li>
-                        <li className='text-black fw-semibold'>{cooking_method.Frying}</li>
-                        <li className='text-black fw-semibold'>{cooking_method.Sauteing}</li>
+                        <li className='text-black fw-semibold'>{Cuisines}</li>
+                        <li className='text-black fw-semibold'>{Cuisines}</li>
+                        <li className='text-black fw-semibold'>{Cuisines}</li>
+                        <li className='text-black fw-semibold'>{Cuisines}</li>
                     </div>
                     <hr />
-                    <span>Ingredients:</span>
-                    <Card.Text className='fw-semibold'>{ingredients}</Card.Text>
                     <br />
                 </Card.Body>
                 <Card.Footer>
