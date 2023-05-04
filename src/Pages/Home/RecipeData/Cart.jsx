@@ -17,7 +17,7 @@ const Cart = ({ data }) => {
 
     return (
         <div>
-            <Card style={{ width: '18rem' }, { height: '800px' }}  >
+            <Card style={{ width: '18rem' }} className='mx-auto' >
                 <Card.Img style={{ height: '256px' }} className='p-2 rounded rounded-4' variant="top" src={RecipesImg} />
                 <Card.Body className=' position-relative fit-content'>
                     <Card.Title>{RecipeName}</Card.Title>
@@ -27,7 +27,7 @@ const Cart = ({ data }) => {
                     <div>
                         <li className='text-black fw-semibold'>{Cuisines.Boiling}</li>
                         <li className='text-black fw-semibold'>{Cuisines.Smoking}</li>
-                        <li className='text-black fw-semibold'>{Cuisines.Frying}</li>
+                        <li className='text-black fw-semibold'>{Cuisines.frying}</li>
                         <li className='text-black fw-semibold'>{Cuisines.Sauteing}</li>
                     </div>
                     <hr />

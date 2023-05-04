@@ -8,7 +8,7 @@ const Header = () => {
 
     const handleLogOut = () => {
         logOut()
-            .then(result => { })
+            .then(result => {})
             .catch(error => {
                 console.log(error)
             })
@@ -23,7 +23,7 @@ const Header = () => {
                         <Nav className="ms-auto align-items-center">
                             <Link className='text-black text-decoration-none me-4' to='/'>Home</Link>
                             <Link className='text-black text-decoration-none me-4' to='/blog'>Blog</Link>
-                            {user ? <Button className='text-black fs-5' variant="outline-dark" onClick={handleLogOut}>Sign Out</Button> : <Link className=' fs-5  rounded-3 p-2 text-black text-decoration-none mx-3' to='/signup'>SignUp</Link>}
+                            {user ? <Button className='text-black fs-5' variant="outline-light" onClick={handleLogOut}>Sign Out</Button> : <Link className=' fs-5  rounded-3 p-2 text-black text-decoration-none mx-3' to='/signup'>SignUp</Link>}
                             {user ? <img style={{ height: '40px', }} className='rounded-5 ' src={user.photoURL} alt="" /> : <Link className=' fs-5 rounded-3 p-2 text-black text-decoration-none me-3' to='/login'>Login</Link>}
                         </Nav>
                     </Navbar.Collapse>

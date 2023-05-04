@@ -1,12 +1,12 @@
 import React from 'react';
-import { Button, Card, Col, Row } from 'react-bootstrap';
+import { Button, Card, Col, Container, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 const SingleChefData = ({ data }) => {
     const { id, chefImg, name, TypesOfRecipes, Likes, Experience } = data;
     return (
-        <div>
-            <Card style={{ width: '18rem' }}>
+        <Col md={4} className='mb-3'>
+            <Card style={{ width: '18rem' }} className='mx-auto gap-0'>
                 <Card.Img variant="top" src={chefImg} />
                 <Card.Body>
                     <Card.Title>{name}</Card.Title>
@@ -16,7 +16,7 @@ const SingleChefData = ({ data }) => {
                     <Link to={`/chefData/${id}`}><Button variant="primary">View Recipes</Button></Link>
                 </Card.Body>
             </Card>
-        </div>
+        </Col>
     );
 };
 
