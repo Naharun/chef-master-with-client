@@ -6,6 +6,7 @@ import Home from "../Pages/Home/Home/Home";
 import RecipeData from "../Pages/Home/RecipeData/RecipeData";
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 import Blog from "../Pages/Home/Home/Blog";
+import PrivateRoute from "../Layout/PrivateRoute";
 
 const router = createBrowserRouter([
     {
@@ -31,7 +32,7 @@ const router = createBrowserRouter([
             },
             {
                 path: '/chefData/:id',
-                element: <RecipeData/>,
+                element: <PrivateRoute><RecipeData/></PrivateRoute>,
                 loader: ({ params }) => fetch(`https://chef-master-with-server.vercel.app/chefData/${params.id}`)
 
             }
