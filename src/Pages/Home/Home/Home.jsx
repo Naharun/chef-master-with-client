@@ -6,7 +6,7 @@ function Home() {
     const [chefdata, setChefData] = useState([]);
 
     useEffect(()=>{
-        fetch('chef.json')
+        fetch('https://chef-master-with-server.vercel.app/chefData/')
         .then(res => res.json())
         .then(data => setChefData(data))
     },[])

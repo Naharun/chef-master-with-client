@@ -5,6 +5,7 @@ import Signup from "../Layout/Signup/Signup";
 import Home from "../Pages/Home/Home/Home";
 import RecipeData from "../Pages/Home/RecipeData/RecipeData";
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
+import Blog from "../Pages/Home/Home/Blog";
 
 const router = createBrowserRouter([
     {
@@ -25,9 +26,13 @@ const router = createBrowserRouter([
                 element: <Signup></Signup>
             },
             {
-                path: '/recipeData/:id',
+                path: '/blog',
+                element: <Blog></Blog>
+            },
+            {
+                path: '/chefData/:id',
                 element: <RecipeData/>,
-                loader: ({ params }) => fetch(`https://special-chef-hunter-with-server-ashraf-mahmud07.vercel.app/chefData/${params.id}`)
+                loader: ({ params }) => fetch(`https://chef-master-with-server.vercel.app/chefData/${params.id}`)
 
             }
         ]

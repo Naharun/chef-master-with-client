@@ -1,8 +1,18 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Button, Container, Form, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../Layout/AuthProvider';
 
 const Header = () => {
+    const { user, logOut } = useContext(AuthContext);
+
+    const handleLogOut = () => {
+        logOut()
+            .then(result => { })
+            .catch(error => {
+                console.log(error)
+            })
+    }
     return (
         <div>
             <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
@@ -13,8 +23,8 @@ const Header = () => {
                         <Nav className="ms-auto">
                             <Link className='text-black text-decoration-none me-4' to='/'>Home</Link>
                             <Link className='text-black text-decoration-none me-4' to='/blog'>Blog</Link>
-                            <Link className='text-black text-decoration-none me-4' to='/signup'>SignUp</Link>
-                            <Link className='text-black text-decoration-none me-4' to='/login'>Login</Link>
+                            {user ? <Button className='text-white bg-black fs-5' variant="outline-dark" onClick={handleLogOut}>Sign Out</Button> : <Link className=' fs-5 text-decoration-none text-white mx-3' to='/signup'>SignUp</Link>}
+                            {user ? <img style={{ height: '40px', }} className='rounded-5 ' src={user.photoURL} alt="" /> : <Link className=' fs-5 text-decoration-none bg-black text-white me-3' to='/login'>Login</Link>}
                         </Nav>
                     </Navbar.Collapse>
                 </Container>

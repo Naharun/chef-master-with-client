@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Card } from 'react-bootstrap';
+import { Button, Card, Col, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 const SingleChefData = ({ data }) => {
@@ -13,7 +13,7 @@ const SingleChefData = ({ data }) => {
                     <Card.Text>Experience: {Experience}</Card.Text>
                     <Card.Text>Recipes: {TypesOfRecipes.length}</Card.Text>
                     <Card.Text>Likes: {Likes}</Card.Text>
-                    <Link to={`/recipeData/${id}`}><Button variant="primary">View Recipes</Button></Link>
+                    <Link to={`/chefData/${id}`}><Button variant="primary">View Recipes</Button></Link>
                 </Card.Body>
             </Card>
         </div>

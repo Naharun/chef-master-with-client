@@ -5,7 +5,7 @@ import Cart from './Cart';
 
 const RecipeData = () => {
     const recipeData = useLoaderData();
-    const {id, chefImg, name, TypesOfRecipes, Likes, About, Experience} = recipeData;
+    const {chefImg, name, TypesOfRecipes, Likes, About, Experience} = recipeData;
     return (
         <Container className='shadow-lg p-3'>
             <div className='d-md-flex gap-3 align-items-center mx-auto mt-2 mt-lg-5'>
