@@ -3,6 +3,7 @@ import Banner from './Banner';
 import SingleChefData from '../RecipeData/SingleChefData';
 import { Container, Row } from 'react-bootstrap';
 import Review from '../../ExtraSection/Review';
+import Resturent from '../../ExtraSection/Resturent';
 
 function Home() {
     const [chefdata, setChefData] = useState([]);
@@ -33,6 +34,7 @@ function Home() {
             </div>
             <br />
             <Review></Review>
+            <Resturent></Resturent>
         </div>
     );
 }
