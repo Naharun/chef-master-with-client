@@ -8,7 +8,8 @@ import 'react-toastify/dist/ReactToastify.css';
 const Cart = ({ data }) => {
     const [disabled, setDisabled] = useState(false);
 
-    const { RecipeName, RecipesImg, rating, Cuisines } = data;
+    const { RecipeName, ingredients, RecipesImg, rating, Cuisines } = data;
+    console.log(Cuisines)
 
     const handelFavourite = () => {
         setDisabled(true);
@@ -25,15 +26,18 @@ const Cart = ({ data }) => {
                     <span>Cooking Method:</span>
                     <br></br>
                     <div>
-                        <li className='text-black fw-semibold'>{Cuisines.Boiling}</li>
-                        <li className='text-black fw-semibold'>{Cuisines.Smoking}</li>
-                        <li className='text-black fw-semibold'>{Cuisines.frying}</li>
-                        <li className='text-black fw-semibold'>{Cuisines.Sauteing}</li>
+                        <li className='text-black fw-semibold'>{Cuisines.Step1}</li>
+                        <li className='text-black fw-semibold'>{Cuisines.Step2}</li>
+                        <li className='text-black fw-semibold'>{Cuisines.Step3}</li>
+                        <li className='text-black fw-semibold'>{Cuisines.Step4}</li>
+                        <li className='text-black fw-semibold'>{Cuisines.Step5}</li>
                     </div>
                     <hr />
-                    
+                    <span>Ingredient</span>
+                    <Card.Text className='fw-semibold'>{ingredients}</Card.Text>
                     <br />
                 </Card.Body>
+
                 <Card.Footer>
                     <small >
                         <div className='d-flex align-items-center'>

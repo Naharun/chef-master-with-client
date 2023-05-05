@@ -2,12 +2,13 @@ import { useEffect, useState } from 'react';
 import Banner from './Banner';
 import SingleChefData from '../RecipeData/SingleChefData';
 import { Container, Row } from 'react-bootstrap';
+import Review from '../../ExtraSection/Review';
 
 function Home() {
     const [chefdata, setChefData] = useState([]);
 
     useEffect(() => {
-        fetch('https://chef-master-with-server.vercel.app/chefData/')
+        fetch('https://chef-master-with-server-naharun.vercel.app/chefData/')
             .then(res => res.json())
             .then(data => setChefData(data))
     }, [])
@@ -31,9 +32,7 @@ function Home() {
                 </Container>
             </div>
             <br />
-            <div>
-
-            </div>
+            <Review></Review>
         </div>
     );
 }
